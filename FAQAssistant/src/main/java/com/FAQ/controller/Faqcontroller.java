@@ -21,7 +21,7 @@ public class Faqcontroller {
 	private Faqservice faqservice;
 	
 	@PostMapping
-	public AskResponse askResponse(@Valid @RequestBody AskRequest askRequest) throws InvalidRequestException{
+	public AskResponse askResponse(@Valid @RequestBody AskRequest askRequest) {
 		if (askRequest.getUserid() == null || askRequest.getUserid().trim().isEmpty()) {
             throw new InvalidRequestException("UserId must not be empty");
         }
